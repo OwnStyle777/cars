@@ -1,7 +1,6 @@
 package com.martin.cars.dto;
 
 
-import com.martin.cars.model.Brand;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
