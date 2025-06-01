@@ -36,6 +36,11 @@ public class ExceptionController {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ErrorResponse("Resource not found: ",List.of(ex.getMessage())));
     }
 
+    @ExceptionHandler(IdMismatchException.class)
+    ResponseEntity<ErrorResponse> handleIdsMismatch(IdMismatchException ex){
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ErrorResponse("Id mismatch: ", List.of(ex.getMessage())));
+    }
+
     @ExceptionHandler(Exception.class)
     ResponseEntity<ErrorResponse> handleOthers(Exception ex){
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new ErrorResponse("Unexpected error: " ,List.of(ex.getMessage())));
