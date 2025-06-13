@@ -23,7 +23,7 @@ public class Car {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "vin", nullable = false)
+    @Column(name = "vin", nullable = false, unique = true)
     private String vin;
 
     @Column(name = "color", nullable = false)
@@ -36,5 +36,9 @@ public class Car {
     @JoinColumn(name = "car_model_id", nullable = false)
     private CarModel carModel;
 
+    @Column(name = "year_manufacture", nullable = false)
+    private Integer yearManufacture;
 
+    @Column(name = "license_plate", nullable = false, unique = true)
+    private String licensePlate;
 }

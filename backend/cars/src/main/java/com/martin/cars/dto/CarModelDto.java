@@ -14,8 +14,8 @@ public class CarModelDto {
     @NotBlank(message = "Car model name is required")
     private String name;
 
-    @NotNull(message = "Year number is required")
-    private Integer yearNumber;
+    @NotNull(message = "Years period is required")
+    private String yearsPeriod;
 
     @NotBlank(message = "Generation type is required")
     private String generationType;

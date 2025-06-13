@@ -26,8 +26,8 @@ public class CarModel {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "year_number", nullable = false)
-    private Integer yearNumber;
+    @Column(name = "years_period", nullable = false)
+    private String yearsPeriod;
 
     @Column(name = "generation_type", nullable = false)
     private String generationType;

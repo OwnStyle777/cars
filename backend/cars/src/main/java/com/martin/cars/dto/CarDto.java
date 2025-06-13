@@ -23,4 +23,10 @@ public class CarDto {
 
     @NotNull(message = "Car model is required")
     private CarModelDto carModel;
+
+    @NotNull(message = "Year of manufacture is required")
+    private Integer yearManufacture;
+
+    @NotNull(message = "License plate is required")
+    private String licensePlate;
 }
